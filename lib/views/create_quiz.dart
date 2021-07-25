@@ -67,7 +67,7 @@ class _CreateQuizState extends State<CreateQuiz> {
         key: _formKey,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
+          child: Column(          //
             children: [
               TextFormField(
                 validator: (val) => val.isEmpty ? "Enter Quiz Image Url" : null,

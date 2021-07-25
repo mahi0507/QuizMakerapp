@@ -12,7 +12,7 @@ class SignUp extends StatefulWidget {
 
 class _SignInState extends State<SignUp> {
   final _formKey = GlobalKey<FormState>();
-  late String email, password;
+   String email, password;
   AuthService authService=new AuthService();
    bool _isLoading=false ;
   signUp()async{
