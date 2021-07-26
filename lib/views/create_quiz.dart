@@ -4,6 +4,8 @@ import 'package:quizapp/views/add_question.dart';
 import 'package:quizapp/widget/widget.dart';
 import 'package:random_string/random_string.dart';
 
+import 'add_questin.dart';
+
 class CreateQuiz extends StatefulWidget {
 
 
@@ -24,7 +26,7 @@ class _CreateQuizState extends State<CreateQuiz> {
 
   createQuiz(){
 
-    quizId = randomAlphaNumeric(16);
+    quizId = randomAlphaNumeric(16);   // dependancy random string....creates random alphanum key
     if(_formKey.currentState.validate()){
 
       setState(() {
@@ -63,7 +65,10 @@ class _CreateQuizState extends State<CreateQuiz> {
         backgroundColor: Colors.transparent,
         //brightness: Brightness.li,
       ),
-      body: Form(
+      body: isLoading ? Container(
+        child: CircularProgressIndicator(),
+
+      ) :Form(
         key: _formKey,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 24),
